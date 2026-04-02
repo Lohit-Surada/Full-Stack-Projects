@@ -1,0 +1,157 @@
+:root {
+  color-scheme: light;
+  --bg: #f3f6fb;
+  --card: #ffffff;
+  --text: #102033;
+  --muted: #5f6b7a;
+  --line: #d9e2ec;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --shadow: 0 24px 60px rgba(16, 32, 51, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #e8eef7 0%, #f8fbff 45%, #eef4ff 100%);
+  color: var(--text);
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  border-radius: 20px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(217, 226, 236, 0.8);
+}
+
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.brand-badge {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--accent);
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.login-brand h1 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.login-brand p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.login-form {
+  display: grid;
+  gap: 14px;
+}
+
+.login-form label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  margin-top: -6px;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font: inherit;
+  color: var(--text);
+  background: #fbfdff;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.checkbox-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.checkbox-wrap input {
+  margin: 0;
+}
+
+.form-row a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.form-row a:hover {
+  text-decoration: underline;
+}
+
+button {
+  margin-top: 4px;
+  padding: 13px 16px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--accent);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .login-brand h1 {
+    font-size: 1.45rem;
+  }
+}

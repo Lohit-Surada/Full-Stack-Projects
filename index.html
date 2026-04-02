@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="login-page">
+      <section class="login-card" aria-labelledby="login-title">
+        <div class="login-brand">
+          <span class="brand-badge">L</span>
+          <div>
+            <h1 id="login-title">Welcome back</h1>
+            <p>Sign in to continue</p>
+          </div>
+        </div>
+
+        <form class="login-form" action="#" method="post">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+          <div class="form-row">
+            <label class="checkbox-wrap">
+              <input type="checkbox" name="remember" />
+              <span>Remember me</span>
+            </label>
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <button type="submit">Log in</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
